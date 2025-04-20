@@ -17,6 +17,8 @@ linter 获取的元信息并不全面，可能会缺失年份、出版地、出�
 
 其中，对于 arxiv 类型，如 Arxiv:2303.18223, Publication 字段会有":"和"." 会导致格子达识别失败，只保留“Arxiv Preprint”即可。volume 字段可以选择点前面的数字如 2303， page可以不填写。
 
+这里需要注意，linter 获取的元信息有时字段本身会包含":"和"."，如 Publication 字段 SORT.Statistics and Operations Research Transactions 会直接导致格子检测为错误格式，因为格子达是根据点号检测的，所有字段最好都不要有":"和"."。
+
 journal 的 page 可以不填写，conference 的 volume 可以不填写。
 
 每次刷新之后需要全选参考文献，修改段落样式，小四号，首行缩进，1.5倍行距，再运行宏。
